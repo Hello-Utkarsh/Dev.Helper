@@ -1,7 +1,13 @@
+'use client'
+
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import React from 'react'
 
 const Navbar = () => {
+
+    const current_path = usePathname()
+    console.log(current_path)
 
     const links = [
         { label: 'Dashboard', href: '/dashboard' },
@@ -16,7 +22,7 @@ const Navbar = () => {
                     <ul className='flex w-full justify-around'>
                         {links.map((link) => {
                             return (
-                                <Link href={link.href} key={link.label} className='text-[#CFF4D2] hover:text-[#56C596] font-medium'>{link.label}</Link>
+                                <Link href={link.href} key={link.label} className={`${current_path==link.href?"text-[#8ccdb1]":"text-[#CFF4D2]"} text-[#CFF4D2] hover:text-[#8ccdb1] font-medium`}>{link.label}</Link>
                             )
                         })}
                     </ul>
