@@ -15,14 +15,14 @@ const Navbar = () => {
     ]
 
     return (
-        <div className='bg-[#329D9C]'>
+        <div className='bg-[#457b9d]'>
             <nav className='flex justify-between p-3'>
-                <Link href={"/"} className='text-2xl font-semibold'>Dev<span className='text-[#CFF4D2]'>.helper</span></Link>
+                <Link href={"/"} className='text-2xl font-semibold'>Dev<span className='text-[#f1faee]'>.helper</span></Link>
                 <div className='w-2/6 flex items-center'>
                     <ul className='flex w-full justify-around'>
                         {links.map((link) => {
                             return (
-                                <Link href={link.href} key={link.label} className={`${current_path==link.href?"text-[#8ccdb1]":"text-[#CFF4D2]"} text-[#CFF4D2] hover:text-[#8ccdb1] font-medium`}>{link.label}</Link>
+                                <Link href={link.href} key={link.label} className={`${current_path==link.href?"text-[#a8dadc]":"text-[#f1faee]"} text-[#f1faee] hover:text-[#a8dadc] font-medium`}>{link.label}</Link>
                             )
                         })}
                     </ul>

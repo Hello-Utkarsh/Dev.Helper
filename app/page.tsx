@@ -4,9 +4,3 @@ export default function Home() {
     </div>
   )
 }
-
-// 205072
-// 329D9C
-// 56C596
-// 7BE495
-// CFF4D2
