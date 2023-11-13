@@ -7,8 +7,6 @@ import React from 'react'
 const Navbar = () => {
 
     const current_path = usePathname()
-    console.log(current_path)
-
     const links = [
         { label: 'Dashboard', href: '/dashboard' },
         { label: 'Issues', href: '/issue' }
