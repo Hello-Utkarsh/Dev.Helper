@@ -49,3 +49,14 @@ export async function GET() {
   const posts = await prisma.issue.findMany();
   return NextResponse.json(posts);
 }
+
+export async function DELETE(req: NextRequest) {
+  let data = await req.json()
+  let delete_result = await prisma.issue.deleteMany({
+    where: {
+      id: data.id
+    }
+  })
+  console.log(delete_result)
+  return NextResponse.json(delete_result, {status: 200})
+}

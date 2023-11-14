@@ -22,11 +22,14 @@ model Issue {
   discription String   @db.Text
   status      Status   @default(OPEN)
   created_at  DateTime @default(now())
+  author      User     @relation(fields: [userId], references: [id])
+  userId      Int
 }
 
 model User {
-  id          Int    @id @default(autoincrement())
-  name        String @db.VarChar(60)
-  email       String @unique
-  description String @db.Text
+  id          Int     @id @default(autoincrement())
+  name        String  @db.VarChar(60)
+  email       String  @unique
+  description String  @db.Text
+  issues      Issue[]
 }
